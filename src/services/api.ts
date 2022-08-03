@@ -5,7 +5,13 @@ const api = axios.create({
   baseURL: 'http://localhost:8080/',
 });
 
-const token = getToken();
-axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+api.interceptors.request.use(async (config: any) => {
+  const token = await getToken();
+  console.log(token);
+  if (config) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
 
 export {api};
