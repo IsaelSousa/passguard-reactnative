@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   text: {
-    fontSize: 30,
+    fontSize: 50,
     fontWeight: 'bold',
     color: '#FFF',
     textAlign: 'center',
@@ -19,9 +19,16 @@ export const styles = StyleSheet.create({
   },
   textinput: {
     width: 300,
-    height: 40,
+    height: 45,
     marginBottom: 20,
     backgroundColor: '#FFF',
     textAlign: 'center',
+    fontWeight: 'bold',
+    fontSize: 18,
+    borderRadius: 5,
+  },
+  footer: {
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });
